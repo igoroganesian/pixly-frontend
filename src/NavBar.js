@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.css";
 
 /**
@@ -16,20 +17,34 @@ import "./NavBar.css";
 
 function NavBar({ resetAppState, setShowSearch }) {
 
+  const navigate = useNavigate();
+
   const handleSearchClick = (event) => {
     event.preventDefault();
+    navigate('/gallery');
     setShowSearch(prevState => !prevState);
   };
 
   return (
     <nav className="NavBar">
       <div className="NavBar-left">
-        <i class="bi bi-columns-gap"></i>
-        <a className="NavBar-brand" href="/gallery" onClick={resetAppState}>Pix.ly</a>
+        <Link
+          className="NavBar-brand"
+          to="/gallery"
+          onClick={resetAppState}>
+          <i class="bi bi-columns-gap"></i> Pix.ly
+        </Link>
       </div>
       <div className="NavBar-right">
-        <a className="NavBar-upload" href="/images/upload">Upload</a>
-        <a className="NavBar-search" href="/gallery" onClick={handleSearchClick}>Search</a>
+        <Link
+          className="NavBar-upload"
+          to="/images/upload">Upload
+        </Link>
+        <Link
+          className="NavBar-search"
+          to="/gallery"
+          onClick={handleSearchClick}>Search
+        </Link>
       </div>
     </nav>
   );

@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Gallery from "./Gallery";
-import ImagePage from "./ImagePage";
-import UploadImageForm from "./UploadImageForm";
+import ImageDetail from "./ImageDetail";
+import UploadForm from "./UploadForm";
 
 /** RoutesList: routes to all site paths.
  *
@@ -13,14 +13,14 @@ import UploadImageForm from "./UploadImageForm";
  *  - showSearch: parent function to toggle search form
  *  - currSearchTerm
  *
- * State:none
+ * State: none
  *
- * App -> RoutesList -> { Gallery, ImagePage, UploadImageForm}
+ * App -> RoutesList -> { Gallery, ImageDetail, UploadForm}
  *
  * Routes:
  *  - Gallery (/gallery)
- *  - ImagePage (/gallery/:id)
- *  - UploadImageForm (/images/upload)
+ *  - ImageDetail (/gallery/:id)
+ *  - UploadForm (/images/upload)
  *  - Path not found -> redirects to /gallery
  * */
 
@@ -38,11 +38,11 @@ function RoutesList({ handleUpload, images, handleSearch, showSearch, currSearch
             />
             <Route
                 path="/gallery/:id"
-                element={<ImagePage images={images} />}
+                element={<ImageDetail images={images} />}
             />
             <Route
                 path="/images/upload"
-                element={<UploadImageForm handleUpload={handleUpload} />}
+                element={<UploadForm handleUpload={handleUpload} />}
             />
             <Route path="*" element={<Navigate to="/gallery" />} />
         </Routes>
