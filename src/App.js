@@ -64,7 +64,7 @@ function App() {
   }
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p style={{margin: '1em'}}>Loading...</p>;
   }
 
   return (

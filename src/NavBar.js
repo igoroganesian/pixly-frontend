@@ -24,11 +24,12 @@ function NavBar({ resetAppState, setShowSearch }) {
   return (
     <nav className="NavBar">
       <div className="NavBar-left">
+        <i class="bi bi-columns-gap"></i>
         <a className="NavBar-brand" href="/gallery" onClick={resetAppState}>Pix.ly</a>
       </div>
       <div className="NavBar-right">
         <a className="NavBar-upload" href="/images/upload">Upload</a>
-        <a className="NavBar-search" href="/#" onClick={handleSearchClick}>Search</a>
+        <a className="NavBar-search" href="/gallery" onClick={handleSearchClick}>Search</a>
       </div>
     </nav>
   );
