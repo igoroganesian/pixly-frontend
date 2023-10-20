@@ -1,9 +1,10 @@
 import { Navigate, useParams } from "react-router";
 import ImageCard from "./ImageCard";
 import ExifData from "./ExifData";
+import "./ImageDetail.css";
 
 /**
- * ImagePage Component
+ * ImageDetail Component
  *
  * Displays a specific image and its EXIF data.
  *
@@ -11,21 +12,23 @@ import ExifData from "./ExifData";
  *  - images: array of image objects [ { image_data:..., url:... }, ... ]
  */
 
-function ImagePage({ images }) {
+function ImageDetail({ images }) {
     const { id } = useParams();
 
     const image = images.find(img => +img.image_data.id === +id);
 
-    if (!image){
+    if (!image) {
         return <Navigate to="/gallery" />;
     }
 
     return (
-        <div className="ImagePage">
+        <div className="ImageDetail">
             <ImageCard image={image} />
-            <ExifData image={image} />
+            <div className="ImageDetail-exifdata">
+                <ExifData image={image} />
+            </div>
         </div>
     );
 }
 
-export default ImagePage;
+export default ImageDetail;

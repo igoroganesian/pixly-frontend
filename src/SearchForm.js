@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./SearchForm.css";
 
 /**
  * SearchForm Component
@@ -35,13 +36,13 @@ function SearchForm({ handleSearch, currSearchTerm = "" }) {
         <input
           id="search-term"
           name="searchTerm"
-          className="Searchform-input"
+          className="col-auto"
           placeholder="Enter a search term"
           onChange={handleChange}
           value={formData.searchTerm}
         />
       </div>
-      <button className="SearchForm-button">Search</button>
+      <button className="btn btn-primary">Search</button>
     </form>
   );
 }

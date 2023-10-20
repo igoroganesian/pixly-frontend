@@ -1,0 +1,23 @@
+/** GALLERY */
+
+.Gallery {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Gallery .pics {
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.Gallery .pics:hover {
+  filter: opacity(.75);
+}
+
+img {
+  width: 100%
+}
+
+
+

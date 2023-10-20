@@ -1,0 +1,9 @@
+.SearchForm button {
+  margin-top: .5em;
+  background-color: rgb(68, 109, 149);
+  border: none;
+}
+
+.SearchForm button:hover {
+  background-color: rgb(82, 132, 181);
+}
