@@ -13,8 +13,8 @@ Pix.ly is an image gallery app that allows users to upload captioned photos, vie
 * npm
 
 ## Setup
-* git clone
-* cd to cloned dir
+* git clone `git@github.com:igoroganesian/pixly-frontend.git` clone_dir_name
+* cd to clone dir
 * npm install
 * npm start (will run on localhost:3000)
   
