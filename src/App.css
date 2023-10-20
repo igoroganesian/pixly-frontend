@@ -1,0 +1,15 @@
+.LoadingMessage {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.LoadingMessage p {
+  margin-right: 15px;
+  margin-top: 2px;
+  font-size: 1.5em;
+}
+
+.LoadingMessage i {
+  font-size: 1.5em;
+}
