@@ -30,6 +30,6 @@ Pix.ly is an image gallery app that allows users to upload captioned photos, vie
 - Backend can be found here: [pixly-backend](https://github.com/igoroganesian/pixly-backend)
 
 ## Note
-This was a self-study project written during a 3.5-day sprint. Tests to follow.
+This was a self-study project written during a 3.5-day sprint.
 
 [Back to top](#pixly-frontend)
